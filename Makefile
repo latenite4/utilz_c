@@ -5,6 +5,8 @@
 #LIBDIR=${HOME}/libs
 LIBDIR=/usr/local/lib
 
+all:	utilz
+
 utilz:
 	echo "... building libutilz.so library..."
 	gcc  -I./ ${COMMONFLAGS} -fPIC -c utilz.c -o utilz.o
@@ -13,5 +15,7 @@ utilz:
 	rm -rf utilz.o a.out
 	file ${LIBDIR}/libutilz.so
 	echo "libutilz.so is in ${LIBDIR}..."
-	echo "set your LD_LIBRARY_PATH var..."
 
+clean:
+	rm -rf utilz.o a.out
+	sudo rm -rf ${LIBDIR}/libutilz.so

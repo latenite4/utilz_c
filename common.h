@@ -12,5 +12,8 @@
 #define MYFALSE (0)
 #define MYTRUE  (1)
 
+#define NULLPTR ((char*)-1)
+#define NEGERROR (-1)
+
 
 #endif
